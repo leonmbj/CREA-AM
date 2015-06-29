@@ -1,0 +1,102 @@
+<script>
+    var corpo_email = '';
+    var currentLatitude = 0;
+    var currentLongitude = 0;
+    var botao = '<center><a id="mapa_windows" href="maps:' + currentLatitude + ',' + currentLongitude + '"><button>Ver</button></a></center>';
+
+    function initiate_geolocation() {
+        document.getElementById("xy").innerHTML = 'Detectando...';
+        navigator.geolocation.getCurrentPosition(handle_geolocation_query, null, {
+            enableHighAccuracy: true
+        });
+    }
+
+    function handle_geolocation_query(position) {
+        currentLatitude = position.coords.latitude;
+        currentLongitude = position.coords.longitude;
+
+        corpo_email = 'Lat/Long:%20' + currentLatitude + '%20,%20' + currentLongitude;
+
+        //botao pra verificar localização
+        var deviceType = (navigator.userAgent.match(/iPad/i)) == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i)) == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Windows/i)) == "Windows" ? "Windows" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : (navigator.userAgent.match(/BlackBerry/i)) == "BlackBerry" ? "BlackBerry" : "null";
+
+        //alert(deviceType);
+        if (deviceType == 'iPhone' || deviceType == 'iPad') {
+            botao = '<center><a  id="mapa_ios" href="maps://maps.apple.com/?q=' + currentLatitude + ',' + currentLongitude + '"><button>Ver</button></a></center>';
+        }
+        if (deviceType == 'Android') {
+            botao = '<center><a  id="mapa_android" href="geo:' + currentLatitude + ',' + currentLongitude + '"><button>Ver</button></a></center>';
+        }
+
+        document.getElementById("xy").innerHTML = 'Latitude:&nbsp;&nbsp;' + currentLatitude + ' <br>Longitude:&nbsp;' + currentLongitude + '<br>' + botao;
+        document.getElementById("suafi").href = "mailto:suafi@crea-am.org.br?subject=Denúncia&body=" + corpo_email;
+        document.getElementById("fiscalizacao").href = "mailto:fiscalizacao@crea-am.org.br?subject=Denúncia&body=" + corpo_email;
+    }
+
+    function openExternal(elem) {
+        window.open(elem.href, "_system");
+        return false; // Prevent execution of the default onClick handler
+    }
+</script>
+
+
+<div>
+    <h2>FISCALIZAÇÃO</h2>
+    <hr>
+    <font size="3">
+        <b>Telefone e e-mails para contato e Denúncias:</b><br>
+        <button onclick="initiate_geolocation();">Adicionar Coordenadas Geográficas</button>
+        <div id="xy" name="xy"></div>
+        <br>
+        Você pode enviar fotos em anexo via e-mail.<br>Também serão enviadas as coordenadas geográficas adicionadas.<br><br>
+        <a href="tel:2125-7124"><img src="img/phone.png" style="width: 20%; max-width: 100px"></a>&nbsp;&nbsp;&nbsp;
+        <a href="mailto:suafi@crea-am.org.br?subject=Denúncia" id="suafi">
+            <img src="img/mail.png" style="width: 20%; max-width: 100px">1</a>&nbsp;&nbsp;&nbsp;
+        <a href="mailto:fiscalizacao@crea-am.org.br?subject=Denúncia" id="fiscalizacao">
+            <img src="img/mail.png" style="width: 20%; max-width: 100px">2</a>&nbsp;&nbsp;&nbsp;<br><br>
+
+
+    </font>
+</div>
+<div style="text-align: justify;">
+    <hr>
+    <a href='http://www.crea-am.org.br/src/fiscalizacao/relatorio.php?echoMiolo=1'
+       onclick="javascript:return openExternal(this)"><b>Relatórios e Mapas</b></a>
+    <br>
+    <hr>
+    <h2>Sobre a Fiscalização</h2>
+
+    <h2><font size="3"><span style="font-weight: bold;">Objetivo</span></font></h2><font size="3">O objetivo da
+    Fiscalização do CREA-AM&nbsp; é combater o exercício ilegal em obras e
+    serviços&nbsp; técnicos.<br><br></font>
+
+    <h2><font size="3"><span style="font-weight: bold;">Função</span></font></h2><font size="3">Ao&nbsp; responsável
+    técnico cabe exercer a sua profissão em observância aos princípios éticos
+    , tecnológicos e ambientais compatíveis com as necessidades da sociedade.<br><br></font>
+
+    <h2><font size="3"><b>Serviços da&nbsp;&nbsp; Fiscalização</b></font></h2>
+    <ul>
+        <li><font size="3">Todas as obras e serviços na área tecnológica .</font>
+        </li>
+        <li><font size="3">Construções e reformas civis.</font>
+        </li>
+        <li><font size="3">Verificação de responsáveis&nbsp; técnicos&nbsp; e registro da respectiva Anotação de
+            Responsabilidade Técnica&nbsp; ( ART ) no CREA-AM.<br></font>
+        </li>
+    </ul>
+    <font size="3"><br></font>
+    <hr>
+    <font size="3">
+        <b>OBS: </b>Não é função do CREA:
+        <ul>
+            <li>Laudos Técnicos.</li>
+            <li>Verificação de Postura.</li>
+            <li>Embargar Obras.</li>
+            <li>Exigir cumprimento do Plano Diretor.</li>
+        </ul>
+
+    </font>
+
+
+</div>
+<br><br><br>

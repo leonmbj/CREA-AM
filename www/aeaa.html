@@ -1,0 +1,93 @@
+<script>
+
+    var deviceType = (navigator.userAgent.match(/iPad/i)) == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i)) == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Windows/i)) == "Windows" ? "Windows" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : (navigator.userAgent.match(/BlackBerry/i)) == "BlackBerry" ? "BlackBerry" : "null";
+
+    //alert(deviceType);
+
+    //alert(a);
+    if (deviceType == 'iPad' || deviceType == 'iPhone') {
+        $('#mapa_windows').hide();
+        $('#mapa_ios').show();
+    }
+    if (deviceType == 'Android') {
+        $('#mapa_windows').hide();
+        $('#mapa_android').show();
+    }
+
+    function openExternal(elem) {
+        window.open(elem.href, "_system");
+        return false; // Prevent execution of the default onClick handler
+    }
+
+
+</script>
+<div style="text-align: center">
+    <br>
+<img src="img/aeaa.png" style="width: 100%" onclick="mostrar('aeaa.html');">
+</div>
+
+<h2>Telefone</h2>
+<a href="tel:3622-1789"><img src="img/phone.png" style="width: 20%; max-width: 100px">&nbsp;&nbsp;&nbsp;<b>(92)3622-1789</b></a>
+<br><br>
+
+<h2>Endereço</h2>
+Av. Ajuricaba, N° 964 - Cachoeirinha
+<br>CEP: 69065-110
+<br>Manaus-AM
+
+
+
+
+
+
+<br><br>
+
+<center>
+    <a hidden id="mapa_android" href="geo:-3.133143,-60.006052">
+        <button>Ver Localização</button>
+    </a>
+</center>
+
+<center>
+    <a  id="mapa_windows" href="maps:-3.133143,-60.006052">
+        <button>Ver Localização</button>
+    </a>
+</center>
+
+<center>
+    <a hidden id="mapa_ios" href="maps://maps.apple.com/?q=-3.133143,-60.006052">
+        <button>Ver Localização</button>
+    </a>
+</center>
+<br>
+<a href="http://maps.google.com/maps?q=-3.133143,-60.006052(AEAA-AM)"><img src="img/map-aeaa.jpg" id="pic" width="100%"></a>
+
+
+
+<br><br>
+<h2>Site</h2>
+
+<a href='http://www.aeaa-am.org' onclick="javascript:return openExternal(this)" style="font-size: 25px"><b>www.aeaa-am.org</b></a>
+
+<br><br>
+<h2>Apresentação</h2>
+<div style="text-align: justify">
+
+
+    A história da <b>ASSOCIAÇÃO DOS ENGENHEIROS E ARQUITETOS DO AMAZONAS- AEAA</b> começa em 09 de setembro de 1967, com o registro da ata da assembleia de fundação, realizadas nas
+    dependências da então Inspetoria do CREA Para no prédio da sua atual Sede, localizada na Rua Costa Azevedo, n°174 – Centro.
+    <br><br>
+    A época não parecia propicia, mais foi justamente nesse confuso e intranquilo momento que um pequeno grupo de Engenheiros decidiu formar uma associação. A idéia, porem, havia
+    nascido bem antes.
+    <br><br>
+    A <b>ASSOCIAÇÃO DOS ENGENHEIROS E ARQUITETOS DO AMAZONAS-AEEA</b>, fundada em 09 de setembro de 1967, constituiu uma sociedade civil com personalidade jurídica, tendo por fim
+    incentivar o progresso da Engenharia, congregar os seus profissionais dos diversos ramos, defenderem os interesses da classe e tomar toda e qualquer iniciativa de interesse
+    geral de seus ‘‘associados’’, resumidamente o artigo quarto do Estatuto. Definidos há 45anos, esses objetivos continuam representando fielmente o caminho seguido ate hoje por
+    nossa Entidade.
+    <br><br>
+    <b>AEEA – ASSOCIAÇÃO DOS ENGENHEIROS E ARQUITETOS DO AMAZONAS</b> se firmou, desde sua fundação, como uma entidade representativa e dinâmica. Inúmeras atividades técnicas e
+    sociais eram realizadas, aproximando os colegas e divulgando os progressos da Engenharia.
+    <br><br>
+
+
+</div>

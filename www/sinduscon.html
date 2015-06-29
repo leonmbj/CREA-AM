@@ -1,0 +1,166 @@
+<script>
+
+    var deviceType = (navigator.userAgent.match(/iPad/i)) == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i)) == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Windows/i)) == "Windows" ? "Windows" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : (navigator.userAgent.match(/BlackBerry/i)) == "BlackBerry" ? "BlackBerry" : "null";
+
+    //alert(deviceType);
+
+    //alert(a)
+    if (deviceType == 'iPad' || deviceType == 'iPhone') {
+        $('#mapa_windows').hide();
+        $('#mapa_ios').show();
+    }
+    if (deviceType == 'Android') {
+        $('#mapa_windows').hide();
+        $('#mapa_android').show();
+    }
+
+
+    function openExternal(elem) {
+        window.open(elem.href, "_system");
+        return false; // Prevent execution of the default onclick handler
+    }
+
+
+</script>
+
+<div style="text-align: center">
+    <br>
+    <img src="img/sinduscon.png" style="width: 100%" onclick="mostrar('sinduscon.html');">
+</div>
+
+<h2>Fone/Fax</h2>
+<a href="tel:3633-1691"><img src="img/phone.png" style="width: 20%; max-width: 100px"></a>&nbsp;&nbsp;&nbsp;
+<a href="tel:3622-1529"><img src="img/phone.png" style="width: 20%; max-width: 100px"></a>&nbsp;&nbsp;&nbsp;
+<a href="tel:3622-6525"><img src="img/phone.png" style="width: 20%; max-width: 100px"></a>&nbsp;&nbsp;&nbsp;
+<br><br>
+
+<h2>Endereço</h2>
+Avenida Djalma Batista 1.151
+<br>7º andar – salas 709/710
+<br>Edifício Atlantic Tower
+<br>Chapada
+<br>CEP: 69050-010
+
+
+<br><br>
+
+<center>
+    <a hidden id="mapa_android" href="geo:-3.100439,-60.024148">
+        <button>Ver Localização</button>
+    </a>
+</center>
+
+<center>
+    <a  id="mapa_windows" href="maps:-3.100439,-60.024148">
+        <button>Ver Localização</button>
+    </a>
+</center>
+
+<center>
+    <a hidden id="mapa_ios" href="maps://maps.apple.com/?q=-3.100439,-60.024148">
+        <button>Ver Localização</button>
+    </a>
+</center>
+<br>
+
+<a href="http://maps.google.com/maps?q=-3.100439,-60.024148(SINDUSCON-AM)"><img src="img/map-sinduscon.jpg" id="pic" width="100%"></a>
+
+
+
+<br><br>
+<h2>Site</h2>
+
+<a href='http://www.sinduscon-am.org.br' onclick="javascript:return openExternal(this)" style="font-size: 20px"><b>www.sinduscon-am.org.br</b></a>
+
+<br><br>
+<h2>Apresentação</h2>
+<div style="text-align: justify">
+
+    O <b>Sindicato da Indústria da Construção Civil do Estado do Amazonas – SINDUSCON-AM</b> é uma Associação, sem fins econômicos, sem distribuição de resultados sob qualquer
+    forma, que representa as categorias de Construção Civil, Montagem Industrial e Engenharia Consultiva, com abrangência sindical em todo o Estado e sede na cidade de Manaus. Ele
+    sucedeu a “Associação Profissional das Indústrias da Construção Civil de Manaus” e foi reconhecido pelo Ministério do Trabalho em 25 de junho de 1979, através da Carta Sindical
+    Mtb- 312.191/79).
+    <br><br>
+
+    <h3>Objetivos</h3>
+    <ul>
+        <li>Defender os princípios da economia de mercado, da livre iniciativa com a valorização do trabalho humano, da democracia representativa e do desenvolvimento sustentável;
+        </li>
+        <li>Amparar, representar e defender os direitos e interesses da Indústria da Construção Civil e promover o desenvolvimento da Indústria da Construção Civil;
+        </li>
+        <li>Estimular e prestigiar a participação e a colaboração com as instituições públicas e privadas, dedicadas ao desenvolvimento tecnológico e gerencial e à normatização da
+            Indústria da Construção Civil;
+        </li>
+        <li>Manter intercâmbio e representação com entidades nacionais, estrangeiras e internacionais congêneres, e promover e apoiar Encontros, Congressos, Seminários, Feiras e
+            outros eventos de interesse do setor;
+        </li>
+        <li>Estimular a prática dos deveres cívicos e a responsabilidade pública da entidade e dos associados, bem como a observância do Código de Ética da categoria;
+        </li>
+        <li>Estimular o crescimento social e profissional dos trabalhadores da Indústria da Construção Civil, o aumento da segurança no trabalho e o aprimoramento, a modernização e
+            o rendimento nas relações entre as empresas e os trabalhadores;
+        </li>
+        <li>Incentivar a fundação de entidades voltados à capacitação, à valorização profissional e ao bem-estar dos trabalhadores e empresários da Indústria da Construção Civil.
+        </li>
+    </ul>
+    <br><br>
+
+    <h3>Composição</h3>
+    O SINDUSCON-AM é constituído de associados efetivos, beneméritos e honorários, sendo associados efetivos: Empresas de qualquer grau de natureza, atuantes na Indústria da
+    Construção Civil em geral; empresas de instalações e montagens; consultoras, projetistas e gerenciadoras de obras. Os associados beneméritos são associados de qualquer
+    categoria que, por serviços relevantes prestados à Industria da Construção Civil, façam jus a essa distinção. Os associados honorários são pessoas físicas ou jurídicas que, não
+    participando do quadro social, sejam merecedoras dessa distinção.
+    <br><br>A Assembléia Geral é o órgão máximo de deliberação da entidade, que conta com uma Administração Executiva, Conselho Fiscal e Comissões Técnicas. A Administração
+    Executiva é composta dos seguintes membros: Presidente, 1º Vice-Presidente, 2º Vice-Presidente, 1º Secretário, 2º Secretário, 1º Tesoureiro, 2º Tesoureiro, sete
+    administradores, que poderão ser responsáveis por Comissões Técnicas e mais cinco suplentes. Os mandatos dos membros da Administração Executiva são de três anos, com direito à
+    reeleição. O Presidente da Administração Executiva só poderá ser reeleito sucessivamente por mais um mandato para este cargo.
+    <br><br>
+
+    <h3>Comissões</h3>
+    O SINDUSCON-AM, além de sua Diretoria Executiva, desenvolve seus trabalhos através das seguintes Comissões Técnicas:
+    <ul>
+        <li>Comissão de Obras Públicas;</li>
+        <li>Comissão de Economia e Estatística;</li>
+        <li>Comissão Política e Relações do Trabalho;</li>
+        <li>Comissão Estadual da Indústria da Construção;</li>
+        <li>Comissão de Material;</li>
+        <li>Comissão da Indústria Imobiliária;</li>
+        <li>Comissão de Infra-estrutura e Terraplanagem.</li>
+    </ul>
+    <br><br>
+
+    <h3>Representação</h3>
+    O SINDUSCON-AM possui representantes nos seguintes órgãos colegiados:
+    <ul>
+        <li>CBIC – Câmara Brasileira da Indústria da Construção;</li>
+        <li>FIEAM – Federação das Indústrias do Estado do Amazonas;</li>
+        <li>CONDEMA – Conselho Municipal de Meio Ambiente;</li>
+        <li>Conselho de Contribuintes do Município de Manaus;</li>
+        <li>CMDU – Conselho Municipal de Desenvolvimento Urbano;</li>
+    </ul>
+    <br><br>
+
+    <h3>Assessorias</h3>
+    O SINDUSCON-AM oferece aos associados assessoria nas áreas:
+    <ul>
+        <li>Jurídica;</li>
+        <li>Econômica;</li>
+        <li>Fiscal;</li>
+        <li>Relações do Trabalho;</li>
+        <li>Meio Ambiente e Desenvolvimento Urbano.</li>
+    </ul>
+    <br><br>
+
+    <h3>Cursos</h3>
+    Oferece Cursos, Palestras, Seminários e Eventos na área de:
+    <ul>
+        <li>Segurança e Saúde do Trabalho;</li>
+        <li>Qualificação e Requalificação profissional;</li>
+        <li>Qualidade e Produtividade;</li>
+        <li>Fiscal / Tributária;</li>
+        <li>Novas Tecnologias;</li>
+        <li>Jurídica;</li>
+        <li>Etc.</li>
+    </ul>
+</div>
+
+<br><br><br>

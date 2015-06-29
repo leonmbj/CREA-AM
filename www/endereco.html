@@ -1,0 +1,150 @@
+<script>
+    var deviceType = (navigator.userAgent.match(/iPad/i)) == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i)) == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Windows/i)) == "Windows" ? "Windows" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : (navigator.userAgent.match(/BlackBerry/i)) == "BlackBerry" ? "BlackBerry" : "null";
+
+    //alert(deviceType);
+
+    //alert(a);
+    if (deviceType == 'iPad' || deviceType == 'iPhone') {
+        $('#mapa_windows').hide();
+        $('#mapa_ios').show();
+    }
+    if (deviceType == 'Android') {
+        $('#mapa_windows').hide();
+        $('#mapa_android').show();
+    }
+</script>
+
+
+<h2>ENDEREÇO - SEDE</h2>
+<hr>Rua Costa Azevedo, nº 174, Centro
+<br>Manaus - Amazonas
+<br>Cep: 69010-230
+<br>
+<br>Horário de Atendimento:
+<br>Das 09:00h às 17:00h
+
+
+
+<br>
+<br>
+
+<center>
+    <a hidden id="mapa_android" href="geo:-3.13113,-60.0221">
+        <button>Ver Localização</button>
+    </a>
+</center>
+
+<center>
+    <a id="mapa_windows" href="maps:-3.13113,-60.0221">
+        <button>Ver Localização</button>
+    </a>
+</center>
+
+<center>
+    <a hidden id="mapa_ios" href="maps://maps.apple.com/?q=-3.13113,-60.0221">
+        <button>Ver Localização</button>
+    </a>
+</center>
+
+<br>
+
+<a href="http://maps.google.com/maps?q=-3.13113,-60.0221(CREA-AM)">
+    <img src="img/map.jpg" id="pic" width="100%">
+</a>
+
+<hr>
+<h2>INSPETORIAS</h2>
+<div class="base_pagina">
+    <br>
+    <span style="font-weight: bold;">INSPETORIA DE ITACOATIARA</span>
+    <br>
+    <br>
+    <!--<br>09/08/2013<br>-->
+    <b>Endereço</b>: Av. Mario Andreazza S/N, São Francisco CEP: 69101-416 - CETAM - Itacoatiara/AM
+    <br>
+    <!--<b>Inspetora Chefe</b>: Eng. Florestal Aldiza Macedo Leão Rodrigues<br>-->
+    <!--<b>Inspetora Adjunto</b>: Eng. de Pesca Deilce Muca de Araújo<br>-->
+    <!--<b>Fiscal</b>: Eng. Florestal e Téc. em Zootecnia Dulcilene Oliveira da Silva <a href="tel:9291423489">(92)9142-3489</a><br>-->
+    <!--<b>Atendimento</b>: Kleber de Souza Miranda<br>E-mail: <a href="mailto:itacoatiara@crea-am.org.br">itacoatiara@crea-am.org.br</a> / <a
+        href="mailto:dulcileneoliveira@crea-am.org.br">dulcileneoliveira@crea-am.org.br</a>-->
+    <br>Abrangendo os Municípios de Itapiranga, Nova Olinda do Norte, Silves, Urucurituba, São Sebastião do Uatumã e Urucará
+
+    <hr>
+    <span style="font-weight: bold;">INSPETORIA DE TABATINGA</span>
+    <br>
+    <br>
+    <!--<br>17/10/2013<br>-->
+    <b>Endereço</b>: Av. Santos Dumont, S/Nº - Vila Verde - Campus IFAM, Tabatinga/AM
+    <br>
+    <!--<b>Inspetor Chefe</b>: Geógrafo Ercivan Gomes de Oliveira<br>-->
+    <!--<b>Inspetor Adjunto</b>: Eng. Civil Raimundo Walmir Oliveira de Lima-->
+    <br>Abrangendo os Municípios de Amaturá, Atalaia do Norte, Fonte Boa, Jutaí, Santo Antônio do Içá, São Paulo de Olivença, Benjamin Constant, Guajará e Tonantins
+
+    <hr>
+    <span style="font-weight: bold;">INSPETORIA DE HUMAITÁ</span>
+    <br>
+    <br>
+    <br>Em Processo de Inauguração da Nova Sede
+    <br>
+    <!--<b>Inspetor Chefe</b>: Eng. Agro. Carlos Antônio Pantoja-->
+    <br>Abrangendo Municípios de Lábrea, Apuí, Borba, Novo Aripuanã, Manicoré, Boca do Acre, Pauini e Canutama
+
+    <hr>
+    <span style="font-weight: bold;">INSPETORIA DE PARINTINS</span>
+    <br>
+    <br>
+    <!--<br>26/09/2013<br>-->
+    <b>Endereço</b>: Estrada Odovaldo Novo, S/Nº -&nbsp; CEP: 69152-470 - Campus IFAM, Parintins/AM
+    <br>
+    <!--<b>Inspetor Chefe</b>: Eng. de Pesca Mizael dos Santos Seixas<br>-->
+    <!--<b>Inspetor Adjunto</b>: Téc. Agropec. José Edvan de Souza Machado <a href="tel:9291887435">(92)9188-7435</a><br>-->
+    <!--<b>Fiscal</b>: Téc. Agropec. Francinaldo Santana da Silva <a href="tel:9291423689">(92) 9142-3689</a><br>E-mail: <a href="mailto:parintins@crea-am.org.br">parintins@crea-am.org.br
+</a> <a href="mailto:francinaldosantana@crea-am.org.br">francinaldosantana@crea-am.org.br</a><br>-->
+    <!--<b>Atendimento</b>: Dielle Cristina Marques de Souza-->
+    <br>Abrangendo os Municípios de Nhamundá, Barreirinha, Maués e Boa Vista do Ramos.
+
+    <hr>
+    <span style="font-weight: bold;">INSPETORIA DE COARI</span>
+    <br>
+    <br>
+    <!--<br>20/03/2014<br>-->
+    <b>Endereço</b>: Estrada Coari-Itapéua, Km 02, S/N Itamaraty - Campus IFAM - Coari/AM
+    <br>
+    <!--<b>Inspetora Chefe</b>: Eng. Civil Rosilene Maia de Barros<br>-->
+    <!--<b>Inspetor Adjunto</b>:Eng. Civil Marcelo Araújo da Silva-->
+    <br>Abrangendo os municípios: Caapiranga, Codajás, Anori, Beruri e Anamã.
+
+    <hr>
+    <span style="font-weight: bold;">INSPETORIA DE MANACAPURU</span>
+    <br>
+    <br>
+    <!--<br>20/03/2014<br>-->
+    <b>Endereço</b>: Av. Boulevard Pedro Rates, n° 1522I, São José - Manacapuru/AM
+    <br>
+    <!--<b>Inspetor Chefe</b>: Téc. em Edificações Júlio Maia Filho<br>-->
+    <!--<b>Inspetor Adjunto</b>: Eng. Civil André Alessandro da Silva Telles-->
+    <br>Abrangendo os municípios: Iranduba, Manaquiri, Novo Airão, Careiro da Várzea e Careiro Castanho.&nbsp;
+
+    <hr>
+    <span style="font-weight: bold;">INSPETORIA DE PRESIDENTE FIGUEIREDO</span>
+    <br>
+    <br>
+    <!--<br>12/11/2013<br>-->
+    <b>Endereço</b>: Av. Onça Pintada, Nº 1308 - Galo da Serra - Campus IFAM - Presidente Figueiredo/AM
+    <br>
+    <!--<b>Inspetor Chefe</b>: Eng. Eletricista Eberte Francisco da Silva Cunha<br>-->
+    <!--<b>Inspetor Adjunto</b>: Eng. Civil&nbsp; e Seg. do Trabalho Marcellos Lúcio Rocha Marcião<br><br>-->
+
+    <hr>
+    <span style="font-weight: bold;">INSPETORIA DE TEFÉ</span>
+    <br>
+    <br>
+    <!--<br>20/03/2014<br>-->
+    <b>Endereço</b>: Rua Olavo Bilac, nº 341 - Centro - CETAM - Tefé/AM
+    <br>
+    <!--<b>Inspetor Chefe</b>: Eng. Civil Carlos José de Sá Ferreira<br>-->
+    <!--<b>Inspetor Adjunto</b>: Eng. Civil Agno Rebouças da Silva -->
+    <br>Abrangendo os municípios: Uarini, Alvarães e Tapauá
+
+</div>
+<br><br><br>

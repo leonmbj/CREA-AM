@@ -1,0 +1,94 @@
+<script>
+
+    var deviceType = (navigator.userAgent.match(/iPad/i)) == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i)) == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Windows/i)) == "Windows" ? "Windows" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : (navigator.userAgent.match(/BlackBerry/i)) == "BlackBerry" ? "BlackBerry" : "null";
+
+    //alert(deviceType);
+
+    //alert(a);
+    if (deviceType == 'iPad' || deviceType == 'iPhone') {
+        $('#mapa_windows').hide();
+        $('#mapa_ios').show();
+    }
+    if (deviceType == 'Android') {
+        $('#mapa_windows').hide();
+        $('#mapa_android').show();
+    }
+
+    function openExternal(elem) {
+        window.open(elem.href, "_system");
+        return false; // Prevent execution of the default onclick handler
+    }
+
+
+</script>
+
+<div style="text-align: center">
+    <br>
+    <img src="img/senge.jpg" style="width: 100%" onclick="mostrar('senge.html');">
+</div>
+
+<h2>Telefones</h2>
+<a href="tel:3622-1103"><img src="img/phone.png" style="width: 20%; max-width: 100px"></a>&nbsp;&nbsp;&nbsp;
+<a href="tel:3231-1754"><img src="img/phone.png" style="width: 20%; max-width: 100px"></a>&nbsp;&nbsp;&nbsp;
+
+<br><br>
+
+<h2>Endereço</h2>
+Rua Costa Azevedo, 09
+<br>Ed. Rio Madeira – Sobreloja SI. 06
+<br>Centro
+<br>Manaus–AM
+
+<br><br>
+
+<center>
+    <a hidden id="mapa_android" href="geo:-3.13279,-60.022416">
+        <button>Ver Localização</button>
+    </a>
+</center>
+
+<center>
+    <a  id="mapa_windows" href="maps:-3.13279,-60.022416">
+        <button>Ver Localização</button>
+    </a>
+</center>
+
+<center>
+    <a hidden id="mapa_ios" href="maps://maps.apple.com/?q=-3.13279,-60.022416">
+        <button>Ver Localização</button>
+    </a>
+</center>
+
+<br><br>
+
+<a href="http://maps.google.com/maps?q=-3.13279,-60.022416(SENGE-AM)"><img src="img/map-senge.jpg" id="pic" width="100%"></a>
+
+
+
+
+<br><br>
+<h2>Site</h2>
+
+<a href='http://sengeamazonas.com.br/' onclick="javascript:return openExternal(this)" style="font-size: 20px"><b>www.sengeamazonas.com.br</b></a>
+
+<br><br>
+<h2>Benefícios</h2>
+<div style="">
+
+
+    Serviços oferecidos aos profissionais<br>
+    <ul>
+    <li>Atendimento Juridico
+        <li>Homologação.</li>
+        <li>Cursos, Seminários, Palestras.</li>
+        <li>Jornais informativos via correios.</li>
+        <li>Contribuição sindical.</li>
+        <li>Contribuição associativa.</li>
+        <li>Convenio com a INTRANORTH para ministrar cursos de outocard e autocard 3D.</li>
+        <li>Convenio com a CIA DOS CURSOS para Pós graduação.</li>
+        <li>Convenio com a IPOG para MBA.</li>
+        <li>Lei e Piso salarial a disposição do Profissional.</li>
+    </ul>
+</div>
+
+<br><br><br>

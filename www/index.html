@@ -1,46 +1,158 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
+<!--HTML5 doctype-->
 <html>
+    
     <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <title>CREA-AM</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+        />
+        <link href="css/bootstrap.min.css" media="all" rel="stylesheet">
+        <link href="css/font.css" rel="stylesheet" type="text/css">
+        <link href="css/styles.css" media="all" rel="stylesheet">
+        <script src="js/modernizr.min.js"></script>
+        <script src="js/nonbounce.js"></script>
+        <style type="text/css">
+            @-ms-viewport { 
+                width: 100vw ;
+                zoom: 100% 
+            }
+    
+            @viewport {
+                width: 100vw ;
+                zoom: 100% ;
+            }
+    
+            @-ms-viewport {
+                user-zoom: fixed ;
+            }
+    
+            @viewport {
+                user-zoom: fixed ;
+            }
+            
+            
+        </style>
+        <!--script src='intelxdk.js'></script>
+    <script src="xhr.js"></script-->
+        <script src="cordova.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/init-app.js"></script>
+        <script src="js/init-dev.js"></script>
         <script type="text/javascript">
-            app.initialize();
+            /* Intel native bridge is available */
+            var onDeviceReady = function () {
+                //hide splash screen
+                //intel.xdk.device.hideSplashScreen();
+    
+            };
+            document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
+    
+            function mostrar(pagina) {
+                $("#conteudo").load(pagina);
+            }
+    
+    
+            function launchGoogleMaps() {
+                var url = "googlemaps://?center=40.765819,-73.975866&zoom=14&views=traffic";
+                intel.xdk.device.launchExternal(url);
+            }
+    
+            function launchSite(url) {
+                //var url = "googlemaps://?center=40.765819,-73.975866&zoom=14&views=traffic";
+                intel.xdk.device.launchExternal(url);
+            }
+    
+            function abrir_menu() {
+                $("#aux").click(function () {
+                    $('nav').addClass('open');
+                    $('body').addClass('menu-open');
+                    return false;
+                });
+            }
+    
+            function teste() {
+    
+            }
+    
+            function openExternal(elem) {
+                window.open(elem.href, "_system");
+                return false; // Prevent execution of the default onClick handler
+            }
         </script>
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    
+    <body>
+        <!-- content goes here-->
+        <header class="clearfix" style="position:fixed;overflow:hidden">
+            <font color="#1c5393">___</font>
+            <font color="white" align="center" size="5%" onclick="window.open('index.html');">
+                <b>CREA-AM</b>
+            </font>
+            <a class="menu pull-right" data-position="right" href="#">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+
+    </a>
+        </header>
+        <div class="overlay"></div>
+        <nav class="right" style="font-weight: 300">
+            <ul>
+                <li>
+                    <a href="#" onclick="mostrar('noticias.html');">Notícias</a>
+                </li>
+                <li>
+                    <a href="#" onclick="mostrar('endereco.html');">Endereços e<br>Inspetorias</a>
+                </li>
+                <li>
+                    <a href="#" onclick="mostrar('contatos.html');">Telefones e<br>E-mails</a>
+                </li>
+                <li>
+                    <a href="#" onclick="mostrar('fiscalizacao.html');">Fiscalização e<br>Denúncias</a>
+                </li>
+                <li>
+                    <a href="https://publico.crea-am.org.br/app/view/sight/externo?form=Servicos" onclick="alert('Você será redirecionado para a página pública do CREA-AM.\n\nEste site é melhor visualizado em telas maiores.',true,'Atenção','OK');
+               javascript:return openExternal(this)
+               ">
+
+                Serviços<br>On-line</a>
+                </li>
+                <li>
+                    <a href="#" onclick="mostrar('legislacao.html');">Legislação<br>Normativos</a>
+                </li>
+                <li>
+                    <a href="#" onclick="mostrar('parceiros.html');">Parceiros</a>
+                </li>
+                <li>
+                    <a href="#" onclick="mostrar('mais.html');">MAIS...</a>
+                </li>
+                <li>
+                    <a href="#" onclick="mostrar('mais.html');">xxx</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- CONTEÚDO -->
+        <div class="container main-content" id="conteudo" style="width: 100%; height: 95% ;">
+            <center>
+                <br>
+                <br>
+                <br>
+                <img src="img/minerva.png" width="25%" height="25%" id="icone">
+                <br>
+                <br>Pressione o ícone
+                <br>superior direito
+                <br>para abrir
+                <br>as opções
+                <br>
+                <br>Pressione em
+                <br>"
+                <b>CREA-AM</b>"
+                <br>Para voltar</center>
+        </div>
     </body>
+
 </html>

@@ -1,0 +1,33 @@
+
+<script type="text/javascript">
+
+$(function(){
+			var f=$('#foo');
+			f.load(function(){ 
+				//f.contents().find('p').width('100%'); 
+                f.contents().find('p').css('font-family','Helvetica Neue');
+                //f.contents().find('p').css('font-weight','100');
+                //f.contents().find('#id_bt_curtir').hide();
+                f.contents().find('img').hide();
+
+            })
+            
+		})
+</script>
+
+
+
+<h2>RELATÓRIOS E MAPAS</h2>
+<hr>
+
+<iframe id="foo"
+        src="http://www.crea-am.org.br/src/fiscalizacao/relatorio.php?echoMiolo=1"
+
+        frameborder="0"
+
+
+        style="overflow: hidden; width: 100%; min-height: 150% ; top: 0px; left: 0px;"
+
+        >
+</iframe>
+

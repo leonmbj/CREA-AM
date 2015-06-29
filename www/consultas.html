@@ -1,0 +1,29 @@
+<script type="text/javascript" src="js/jquery.js"></script>
+<title>iframehide</title>
+<script type="text/javascript">
+    $(function () {
+        var f = $('#foo')
+
+        f.load(function () {
+            f.contents().find('#logo_externo').hide();
+            f.contents().find('#qm0').css("background-color:#aaa");
+            //f.contents().find('head').hide();
+            f.contents().find('img').hide();
+            f.contents().find('#menuSuperior_helpdesk').hide();
+            //
+            f.contents().find('.cad_form_txf').width('90%');
+            //f.contents().find('.select2-container').css("min-width:40px");
+            //f.contents().find('.cad_form_cont_campo').width('100%');
+        })
+    })
+</script>
+
+<iframe id="foo"
+        src="http://www.crea-am.org.br/src/site/noticia.php?echoMiolo=1"
+
+        frameborder="0"
+        width="100%"
+        height="130%"
+        style="overflow: hidden; width: 100%; min-height: 110% "
+        >
+</iframe>

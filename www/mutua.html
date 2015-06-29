@@ -1,0 +1,135 @@
+<script>
+    var deviceType = (navigator.userAgent.match(/iPad/i)) == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i)) == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Windows/i)) == "Windows" ? "Windows" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : (navigator.userAgent.match(/BlackBerry/i)) == "BlackBerry" ? "BlackBerry" : "null";
+
+    //alert(deviceType);
+
+    //alert(a);
+    if (deviceType == 'iPad' || deviceType == 'iPhone') {
+        $('#mapa_windows').hide();
+        $('#mapa_ios').show();
+    }
+    if (deviceType == 'Android') {
+        $('#mapa_windows').hide();
+        $('#mapa_android').show();
+    }
+
+    function openExternal(elem) {
+        window.open(elem.href, "_system");
+        return false; // Prevent execution of the default onclick handler
+    }
+</script>
+
+<div style="text-align: center">
+    <br>
+    <img src="img/mutua.png" style="width: 100%" onclick="mostrar('mutua.html');">
+</div>
+
+<h2>Fone/Fax</h2>
+<a href="tel:3622-8024">
+    <img src="img/phone.png" style="width: 20%; max-width: 100px">
+</a>&nbsp;&nbsp;&nbsp;
+
+<a href="tel:3236-2028">
+    <img src="img/fax.png" style="width: 20%; max-width: 100px">
+</a>&nbsp;&nbsp;&nbsp;
+
+<br>
+<br>
+
+<h2>Endereço</h2>
+Avenida Djalma Batista, 2100
+<br>Manaus Plaza Shopping; salas 205 e 206
+<br>Chapada,
+<br>CEP: 69050-010
+<br>Manaus-AM
+
+
+
+
+
+<br>
+<br>
+
+<center>
+    <a hidden id="mapa_android" href="geo:-3.097405,-60.024008">
+        <button>Ver Localização</button>
+    </a>
+</center>
+
+<center>
+    <a id="mapa_windows" href="maps:-3.097405,-60.024008">
+        <button>Ver Localização</button>
+    </a>
+</center>
+
+<center>
+    <a hidden id="mapa_ios" href="maps://maps.apple.com/?q=-3.097405,-60.024008">
+        <button>Ver Localização</button>
+    </a>
+</center>
+
+<br>
+<a href="http://maps.google.com/maps?q=-3.097405,-60.024008(MUTUA-AM)">
+    <img src="img/map-mutua.jpg" id="pic" width="100%">
+</a>
+
+<br>
+<br>
+<h2>Site</h2>
+
+<a href='http://www.mutua-am.com.br' onclick="javascript:return openExternal(this)" style="font-size: 20px"><b>www.mutua-am.com.br</b></a>
+
+<br>
+<br>
+<h2>Apresentação</h2>
+<div style="text-align: justify">
+
+    <br>
+    <h3>O que é a Mútua</h3>
+    A Mútua - Caixa de Assistência dos Profissionais dos Creas - é uma sociedade civil sem fins lucrativos criada pelo Conselho Federal de Engenharia, Arquitetura e Agronomia (Confea), pela resolução nº 252 de 17 de dezembro de 1977, conforme autorização legal contida no artigo 4º da Lei 6.496 de 7 de dezembro de 1977.
+    <br>
+    <br>O principal objetivo da Mútua é oferecer a seus associados planos de benefícios sociais, previdenciários e assistenciais, de acordo com sua disponibilidade financeira, respeitando o seu equilíbrio econômico-financeiro.
+    <br>
+    <br>
+
+    <h3>Missão</h3>
+    Atuar como entidade assistencial do Sistema Confea/Crea e Mútua, prestando benefícios diferenciados que propiciem melhor qualidade de vida aos mutualistas.
+    <br>
+    <br>
+
+    <h3>Negócio</h3>
+    Soluções em benefícios para os mutualistas.
+    <br>
+    <br>
+
+    <h3>Princípios e valores</h3>
+    Integridade, ética e cidadania; parcerias e relacionamentos de qualidade; serviços de excelência; valorização e desenvolvimento profissional e funcional; descentralização, unidade de ação e transparência; compromisso com a aprendizagem organizacional; inovação e compromisso com o desenvolvimento sustentável; espírito de equipe.
+    <br>
+    <br>
+
+    <h3>Visão</h3>
+    Ser referência na prestação de benefícios, com crescimento expressivo de associados até 2010.
+    <br>
+    <br>
+
+    <h3>Quem pode se associar à Mútua</h3>
+    Todos os profissionais com registro nos Conselhos Regionais de Engenharia, Arquitetura e Agronomia (Creas) - desde que atendam às condições estabelecidas em seu regimento -, além de empregados dos Creas, do Conselho Federal de Engenharia, Arquitetura e Agronomia (Confea) e da Mútua.
+
+    <br>
+    <br>
+
+    <h3>Como se associar à Mútua</h3>
+    O profissional deverá preencher o cadastro on-line, optando por uma das três categorias. Se optar por se tornar Sócio Contribuinte, deve pagar a taxa de inscrição (R$ 10) e a anuidade (R$ 130) - informe-se sobre o valor proporcional na Central de Relacionamento Mútua, telefone 0800-61-0003.
+    <br>
+    <br>Os boletos para pagamento da taxa de inscrição e da anuidade serão enviados para o endereço que estiver selecionado no cadastro on-line (residencial ou comercial). Poderão ser pagos em qualquer agência bancária até a data do vencimento. Após a data, somente nas agências do Banco do Brasil.
+
+    <br>
+    <br>
+
+    <h3>Atualização cadastral</h3>
+    Aqueles que já são associados à Mútua e desejam atualizar seus dados cadastrais, deverá informar os dados de acesso para os Sistemas Mútua e executar as atualizações necessárias.
+
+
+</div>
+
+<br><br><br>
